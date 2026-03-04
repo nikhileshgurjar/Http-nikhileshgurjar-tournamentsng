@@ -5,8 +5,6 @@
 <title>Free Fire Tournament</title>
 
 <style>
-
-/* Background Image */
 body {
     margin: 0;
     padding: 0;
@@ -19,7 +17,6 @@ body {
     position: relative;
 }
 
-/* Dark overlay */
 body::before {
     content: "";
     position: absolute;
@@ -30,7 +27,6 @@ body::before {
     left: 0;
 }
 
-/* Container */
 .container {
     width: 100%;
     max-width: 400px;
@@ -38,7 +34,6 @@ body::before {
     z-index: 1;
 }
 
-/* Glass Form */
 .form-box {
     background: rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
@@ -47,19 +42,12 @@ body::before {
     text-align: center;
     color: white;
     box-shadow: 0 0 25px red;
-    transition: 0.4s;
-}
-
-.form-box:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 40px red;
 }
 
 .form-box h1 {
     color: #ff3c3c;
 }
 
-/* Inputs */
 form input, 
 form textarea {
     width: 100%;
@@ -74,13 +62,6 @@ form textarea {
     resize: none;
 }
 
-form input:focus,
-form textarea:focus {
-    outline: none;
-    box-shadow: 0 0 10px red;
-}
-
-/* Button */
 form button {
     width: 100%;
     padding: 12px;
@@ -90,15 +71,8 @@ form button {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-form button:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 20px red;
-}
-
-/* Info Box */
 .info-box {
     background: rgba(255,255,255,0.9);
     margin-top: 15px;
@@ -110,39 +84,70 @@ form button:hover {
     color: red;
 }
 
+#thankyou {
+    display: none;
+    color: #00ff88;
+    margin-top: 15px;
+    font-weight: bold;
+}
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
-    <div class="form-box">
-        <h1>FREE TOURNAMENTS !!</h1>
+<div class="form-box">
+<h1>FREE TOURNAMENTS !!</h1>
 
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="UID">
-            <input type="text" placeholder="Instagram">
-            <input type="text" placeholder="Level">
+<form action="https://formsubmit.co/nikhileshgurjar11@gmail.com"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="submitted()">
 
-            <label>Can you win ??</label>
-            <textarea placeholder="Comment"></textarea>
+<input type="text" name="Player Name" placeholder="Name" required>
+<input type="text" name="Player UID" placeholder="UID" required>
+<input type="text" name="Instagram ID" placeholder="Instagram" required>
+<input type="text" name="Player Level" placeholder="Level" required>
 
-            <button type="submit">SUBMIT</button>
-        </form>
-    </div>
+<label>Can you win ??</label>
+<textarea name="Winning Confidence" placeholder="Comment"></textarea>
 
-    <div class="info-box">
-        <h2>Jaruri baatein dhyan rakhe !</h2>
-        <ul>
-            <li>Only booyah price is 30rs. no extra reward</li>
-            <li>Room id and password announce on @nikhilesh_gurjar</li>
-            <li>Time - 7pm, 6 Mar, 2026</li>
-        </ul>
-    </div>
+<input type="hidden" name="_subject" value="🔥 New Free Fire Tournament Entry!">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+<button type="submit">SUBMIT</button>
+
+</form>
+
+<div id="thankyou">
+✅ Thank You! Your entry has been submitted 🔥
+</div>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
 </div>
+
+<div class="info-box">
+<h2>Jaruri baatein dhyan rakhe !</h2>
+<ul>
+<li>Only booyah price is 30rs. no extra reward</li>
+<li>Room id and password announce on @nikhilesh_gurjar</li>
+<li>Time - 7pm, 6 Mar, 2026</li>
+</ul>
+</div>
+
+</div>
+
+<script>
+function submitted() {
+    setTimeout(function(){
+        document.getElementById("thankyou").style.display = "block";
+        document.querySelector("form").reset();
+    }, 500);
+}
+</script>
 
 </body>
 </html>
