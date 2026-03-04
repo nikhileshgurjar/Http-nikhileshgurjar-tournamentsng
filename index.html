@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Free Fire Tournament</title>
+
+<style>
+
+/* Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url("bg.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Dark overlay */
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Glass Form */
+.form-box {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 25px red;
+    transition: 0.4s;
+}
+
+.form-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px red;
+}
+
+.form-box h1 {
+    color: #ff3c3c;
+}
+
+/* Inputs */
+form input, 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+form textarea {
+    height: 80px;
+    resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px red;
+}
+
+/* Button */
+form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, red, orange);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px red;
+}
+
+/* Info Box */
+.info-box {
+    background: rgba(255,255,255,0.9);
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.info-box h2 {
+    color: red;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+        <h1>FREE TOURNAMENTS !!</h1>
+
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="UID">
+            <input type="text" placeholder="Instagram">
+            <input type="text" placeholder="Level">
+
+            <label>Can you win ??</label>
+            <textarea placeholder="Comment"></textarea>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <div class="info-box">
+        <h2>Jaruri baatein dhyan rakhe !</h2>
+        <ul>
+            <li>Only booyah price is 30rs. no extra reward</li>
+            <li>Room id and password announce on @nikhilesh_gurjar</li>
+            <li>Time - 7pm, 6 Mar, 2026</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
